@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em & Rem Units</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    #box_1 {
+      font-size: 20px;
+    }
+  
+    #box_1 p {
+      font-size: 1.5em;
+      padding: 1em;
+    }
+  
+    #box_1 ul {
+      font-size: 1.2em;
+    }
+  
+    /* Rem refers to the html font-size, which is by default 16px */
+  
+    html {
+      font-size: 62.5%;
+    }
+  
+    #box_3 h3 {
+      font-size: 2rem; 
+    }
+  
+    #box_2 p {
+      font-size: 1.6rem;
+      line-height: 1.7rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="box_1">
+    <h3>Box One</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, labore, dicta qui esse aut dolore eos quaerat iste cupiditate veniam ratione neque itaque ut non atque eius reprehenderit nulla illum.</p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <ul>
+          <li>1</li>
+        </ul>
+      </ul>
+    </ul>
+  </div>
+  <div id="box_2">
+    <h3>Box Two</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat architecto, similique perferendis quis dolorum, maxime quasi est id nemo, minima rerum expedita neque voluptatem officiis aut quisquam sunt totam possimus.</p>
+  </div>
+  <div id="box_3">
+    <h3>Box Three</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat architecto, similique perferendis quis dolorum, maxime quasi est id nemo, minima rerum expedita neque voluptatem officiis aut quisquam sunt totam possimus.</p>
+  </div>
+</body>
+</html>
