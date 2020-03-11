@@ -36,6 +36,16 @@ p {
   color: #93cb52;
 }
 
+.bg_light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg_dark {
+  background: #333;
+  color: #f4f4f4;
+}
+
 .l_heading {
   font-size: 4rem;
   margin-bottom: 0.75rem;
@@ -53,17 +63,14 @@ p {
   margin-bottom: 2rem;
 }
 
-.py_1 {
-  padding: 1.5rem;
-}
+.py_1 {padding: 1.5rem 0;}
+.py_2 {padding: 2rem 0;}
+.py_3 {padding: 3rem 0;}
 
-.py_2 {
-  padding: 2rem;
-}
+.p_1 {padding: 1.5rem;}
+.p_2 {padding: 2rem;}
+.p_3 {padding: 3rem;}
 
-.py_3 {
-  padding: 3rem;
-}
 
 .btn {
   display: inline-block;
@@ -81,6 +88,16 @@ p {
 .btn_dark{
   background: #333;
   color: #fff;
+}
+
+.list {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #444 1px;
 }
 
 /* Navbar */
@@ -153,4 +170,28 @@ p {
   border-radius: 50%;
   padding: 1rem;
   margin-bottom: 1rem;
+}
+
+/* Section Who We Are */
+#who {
+  display: flex;
+}
+
+#who div {
+  flex: 1;
+}
+
+#who .who_img {
+  background: url("../img/people.jpg") no-repeat center center/cover;
+}
+
+/* Section: Clients */
+#clients .items {
+  display: flex;
+}
+
+#clients .items img {
+  display: block;
+  margin: auto;
+  width: 60%;
 }
