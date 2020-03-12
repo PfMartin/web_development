@@ -2,9 +2,13 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+counter = -1
+
 @app.route('/')
 def index():
-  return render_template('index.html')
+  global counter
+  counter += 1
+  return render_template('index.html', count=str(counter))
 
 @app.route('/about')
 def about():
