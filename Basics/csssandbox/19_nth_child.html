@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nth Child</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    li {
+      padding: 0.25rem;
+      margin: 0.25rem;
+      list-style: none;
+    }
+
+    /* First child */
+    li:first-child {
+      background: #444;
+      color: #f4f4f4;
+    }
+
+    /* Position 3 */
+    li:nth-child(3) {
+      background: #035c5c;
+      color: #f4f4f4;
+    }
+
+    /* Every 3 */
+    li:nth-child(4n+0) {
+      background: rgb(255, 166, 0);
+      color: #333;
+    }
+
+    /* Every 3 starting after 7 */
+    li:nth-child(3n+7) {
+      background: yellow;
+    }
+
+    /* Every odd */
+    li:nth-child(odd) {
+      background: #035c5c;
+      color: #f4f4f4;
+    }
+
+    /* Every even */
+    li:nth-child(even) {
+      background: rgb(255, 166, 0);
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+    <li>Item 11</li>
+    <li>Item 12</li>
+    <li>Item 13</li>
+    <li>Item 14</li>
+    <li>Item 15</li>
+    <li>Item 16</li>
+    <li>Item 17</li>
+    <li>Item 18</li>
+    <li>Item 19</li>
+    <li>Item 20</li>
+  </ul>
+</body>
+</html>

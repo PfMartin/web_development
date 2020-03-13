@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables</title>
+  <style>
+    :root {
+      --max_width: 1000px;
+      --primary_color: #333;
+      --secondary_color: #ccc;
+      --light_color: #f4f4f4;
+      --box_1_width: 1;
+      --box_2_width: 2;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4;
+      background: var(--light_color);
+    }
+    header{
+      background-color: var(--primary_color);
+      border-bottom: 5px var(--secondary_color) solid;
+      color: #fff;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      margin: auto;
+      max-width: var(--max_width)
+    }
+    .box {
+      background-color: var(--primary_color);
+      border-bottom: 5px var(--secondary_color);
+      color: #fff;
+      padding: 1rem;
+      margin: 1rem;
+    }
+    .box_1 {
+      flex: var(--box_1_width)
+    }
+    .box_2 {
+      flex: var(--box_2_width)
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CSS Variables</h1>
+  </header>
+  <section id="First section">
+    <div class="container">
+      <div class="box box_1">
+        <h3>Heading 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et omnis, quod natus accusantium perferendis vitae!</p>
+      </div>
+      <div class="box box_2">
+        <h3>Heading 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et omnis, quod natus accusantium perferendis vitae!</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
