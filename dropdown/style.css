@@ -1,0 +1,116 @@
+:root {
+  --main_light: #f4f4f4;
+  --main_dark: #333;
+  --accent: rgba(236, 177, 67, 0.993);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--main_dark);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar ul {
+  list-style: none;
+}
+
+#navbar ul li {
+  color: var(--main_light);
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+}
+
+#navbar ul li a {
+  color: var(--main_light);
+  text-decoration: none;
+}
+
+#navbar ul li ul {
+  display: none;
+}
+
+#navbar ul li:hover {
+  cursor: pointer;
+  background: var(--accent);
+  color: var(--main_light);
+}
+
+#navbar ul li:hover a {
+  color: var(--main_light);
+}
+
+/* Nested dropdown show */
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background: var(--main_dark);
+}
+
+#navbar ul li:hover ul li span {
+  float: right;
+  color: var(--main_dark);
+  background: var(--main_light);
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+#navbar ul li:hover ul li:hover {
+  background: var(--accent);
+}
+
+#navbar ul li:hover ul li:hover a {
+  color: var(--main_dark);
+}
+
+#navbar ul li:hover ul li:hover span {
+  color: var(--main_light);
+  background: var(--main_dark);
+}
+
+#showcase {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--main_light);
+  height: 100vh;
+}
+
+#showcase h1 {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+#showcase p {
+  color: var(--main_dark);
+  padding: 1rem;
+}
+
+@media(max-width: 600px) {
+  #navbar ul li {
+    display: block;
+  }
+
+  #navbar ul li:hover ul {
+    width: 100%;
+    position: relative;
+  }
+}
