@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Areas</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+      display: grid;
+      grid-template-areas: 
+        'header header header'
+        'content content sidebar'
+        'box_1 box_2 box_2'
+        'box_3 box_3 box_3'
+        'footer footer footer';
+      grid-gap: 0.5rem;
+    }
+    header,
+    .content,
+    .sidebar,
+    .box_1,
+    .box_2,
+    .box_3,
+    footer {
+      border: #333 solid 1px;
+      padding: 1rem;
+    }
+    .header {
+      grid-area: header;
+    }
+    .content {
+      grid-area: content;
+    }
+    .sidebar {
+      grid-area: sidebar;
+    }
+    .box_1 {
+      grid-area: box_1;
+    }
+    .box_2 {
+      grid-area: box_2;
+    }
+    .box_3 {
+      grid-area: box_3;
+    }
+    footer {
+      grid-area: footer;
+      text-align: center;
+    }
+
+    @media(max-width: 500px) {
+      .container {
+        grid-template-areas: 
+          'header'
+          'content'
+          'sidebar'
+          'box_1'
+          'box_2'
+          'box_3'
+          'footer';
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>My Website</h1>
+    </header>
+
+    <section class="content">
+      <h3>Welcome To My Site</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi optio aut maiores dolorem voluptate harum, deserunt expedita totam molestias asperiores nam ducimus incidunt reprehenderit eaque animi, quasi doloribus quaerat. Voluptates recusandae exercitationem accusamus velit praesentium. Esse quasi nihil perspiciatis expedita?</p>
+    </section>
+
+    <aside class="sidebar">
+      <h3>Contact Us</h3>
+      <ul>
+        <li>Some Company</li>
+        <li>50 Main St, Boston MA</li>
+        <li>something@something.com</li>
+        <li>555-555-5555</li>
+      </ul>
+    </aside>
+    <div class="box_1">
+      <h3>Heading</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis nemo quae ducimus hic quas saepe. Debitis, culpa quod. Placeat, quia!</p>
+    </div>
+    <div class="box_2">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores tenetur ratione dicta repellat quaerat distinctio minus reprehenderit earum unde, aut ipsa eligendi obcaecati, temporibus iste, error nihil asperiores quo consequatur.</p>
+    </div>
+    <div class="box_3">
+      <h3>Heading</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, quasi? Tempora molestiae nesciunt corrupti beatae.</p>
+    </div>
+
+    <footer class="footer">
+      <p>Copyright &copy; 2020</p>
+    </footer>
+  </div>
+</body>
+</html>
