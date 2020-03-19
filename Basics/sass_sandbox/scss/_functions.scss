@@ -1,0 +1,17 @@
+@import 'variables';
+
+// Set Text Color
+@function set_text_color($color) {
+  @if (lightness($color) > 50) {
+    @return $dark_color;
+  } @else {
+    @return $light_color;
+  }
+}
+
+// Transform mixin
+@mixin transform($property) {
+  --webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}

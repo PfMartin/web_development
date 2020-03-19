@@ -1,0 +1,71 @@
+@import 'variables';
+@import 'functions';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $light_color;
+  color: $dark_color;
+  font-family: $font_stack;
+  line-height: 1.5;
+}
+
+header {
+  background: $dark_color;
+  color: set_text_color($dark_color);
+  padding: 1rem;
+  h1 {
+    text-align: center;
+  }
+}
+
+.section {
+  padding: 3rem;
+  h3 {
+    font-size: 2rem;
+  }
+  &_a {
+    background: $primary_color;
+    color: set_text_color($primary_color);
+  }
+  &_b {
+    background: $secondary_color;
+    color: set_text_color($secondary_color);
+  }
+}
+
+%btn_shared {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.btn {
+  &_light {
+    @extend %btn_shared;
+    background-color: $light_color;
+    color: $dark_color;
+  
+    &:hover {
+      @include transform(rotate(20deg));
+      background-color: darken($light_color, 10%);
+    }
+  }
+
+  &_dark {
+    @extend %btn_shared;
+    background-color: $dark_color;
+    color: $light_color;
+  
+    &:hover {
+      @include transform(rotate(-20deg));
+      background-color: lighten($dark_color, 10%);
+    }
+  }
+}
