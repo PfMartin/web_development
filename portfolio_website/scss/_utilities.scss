@@ -41,6 +41,26 @@
   }
 }
 
+// Backgrounds
+.bg {
+  &_main {
+    background: $main_color;
+    color: set_text_color($main_color);
+  }
+  &_dark {
+    background: $dark_color;
+    color: set_text_color($dark_color);
+  }
+  &_light {
+    background: $light_color;
+    color: set_text_color($light_color);
+  }
+  &_medium {
+    background: $medium_color;
+    color: set_text_color($medium_color);
+  }
+}
+
 .lead {
   font-size: 1.3rem;
   margin-bottom: 2rem;
@@ -64,4 +84,21 @@
   &_2 { margin: 2rem 0; }
   &_3 { margin: 3rem 0; }
   &_4 { margin: 4rem 0; }
+}
+
+.section_title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.bottom_line {
+  height: 2px;
+  width: 3rem;
+  background: $main_color;
+  display: block;
+  margin: 0 auto 1rem auto;
 }

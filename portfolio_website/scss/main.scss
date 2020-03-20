@@ -1,5 +1,6 @@
 @import 'config';
 @import 'utilities';
+@import 'item_grid';
 
 * {
   margin: 0;
@@ -9,7 +10,7 @@
 body {
   font-family: 'Dosis', sans-serif;
   line-height: 1.6;
-  background: $dark_color;
+  background: #fff;
   color: $light_color;
 }
 
@@ -84,9 +85,11 @@ img {
     }
   }
 
-  // &_inner {
-
-  // }
+  &_inner {
+    background: $bg_image no-repeat 20% 30%/cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main_color;
+  }
 }
 
 // Home Sections
@@ -129,6 +132,169 @@ img {
           font-size: 2rem;
           font-weight: bold;
         }
+      }
+    }
+  }
+  &_c {
+    background: #fff;
+    color: $dark_color;
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+      &_step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        background: $main_color;
+        color: set_text_color($main_color);
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 1s;
+      }
+      &_icon {
+        border-radius: 50%;
+        background: $dark_color;
+        color: set_text_color($dark_color);
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+        &:hover {
+          background: $main_color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+          .process_step {
+            background: $dark_color;
+            color: set_text_color($dark_color);
+          }
+        }
+      }
+    }
+  }
+}
+
+// About Sections
+#about {
+  &_a {
+    color: $dark_color;
+    .about_info {
+      display: grid;
+      grid-template-areas: 
+        'bioimage bio bio'
+        'aw1 aw2 aw3';
+      grid-gap: 1.2rem;
+    }
+    // Grid Area
+    .bio_image {
+      grid-area: bioimage;
+    }
+    .bio {
+      grid-area: bio;
+      border-left: 3px solid $main_color;
+      padding: .8rem;
+    }
+    .award_1 {
+      grid-area: aw1;
+    }
+    .award_2 {
+      grid-area: aw2;
+    }
+    .award_3 {
+      grid-area: aw3;
+    }
+    .award_1 .fas,
+    .award_2 .fas,
+    .award_3 .fas {
+      color: $main_color;
+      margin: 1rem;
+    }
+  }
+  &_b {
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium_color;
+      border-radius: 5px;
+      margin-bottom: 0.3rem;
+      div {
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background: $main_color;
+      }
+    }
+  }
+  &_c {
+    .about_logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+      img {
+        justify-self: center;
+        width: 70%;
+      }
+    }
+  }
+  &_d {
+    color: $dark_color;
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+      p {
+        border: 1px solid $medium_color;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: .5rem;
+      }
+    }
+  }
+}
+
+// Footer
+#main_footer {
+  background: $dark_color;
+  color: #fff;
+  height: 5rem;
+  .footer_content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+    .social a .fab {
+      color: #fff;
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: .5rem;
+      &:hover {
+        background: $main_color;
+
       }
     }
   }
