@@ -36,6 +36,30 @@
 .text_center {
   text-align: center; }
 
+.py_1 {
+  padding: 1rem 0; }
+
+.py_2 {
+  padding: 2rem 0; }
+
+.py_3 {
+  padding: 3rem 0; }
+
+.py_4 {
+  padding: 4rem 0; }
+
+.my_1 {
+  margin: 1rem 0; }
+
+.my_2 {
+  margin: 2rem 0; }
+
+.my_3 {
+  margin: 3rem 0; }
+
+.my_4 {
+  margin: 4rem 0; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -95,3 +119,35 @@ img {
     #header_home .header_content h1 {
       font-size: 4rem;
       line-height: 1.2; }
+
+#home_a {
+  background: #fff;
+  color: #333; }
+  #home_a .specials {
+    margin-top: 3rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr); }
+    #home_a .specials .fas {
+      color: #ffbc00;
+      padding-bottom: .4rem; }
+
+#home_b {
+  background: #fff;
+  color: #333; }
+  #home_b .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+    #home_b .stats div {
+      padding: 3rem 0; }
+      #home_b .stats div:nth-child(odd) {
+        background: #f4f4f4; }
+      #home_b .stats div:nth-child(even) {
+        background: #ccc; }
+    #home_b .stats li {
+      line-height: 2; }
+      #home_b .stats li.stats_title {
+        font-size: 1.5rem; }
+      #home_b .stats li.stats-number {
+        font-size: 2rem;
+        font-weight: bold; }

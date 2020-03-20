@@ -49,3 +49,19 @@
 .text_center {
   text-align: center;
 }
+
+// Padding
+.py {
+  &_1 { padding: 1rem 0; }
+  &_2 { padding: 2rem 0; }
+  &_3 { padding: 3rem 0; }
+  &_4 { padding: 4rem 0; }
+}
+
+// Margin
+.my {
+  &_1 { margin: 1rem 0; }
+  &_2 { margin: 2rem 0; }
+  &_3 { margin: 3rem 0; }
+  &_4 { margin: 4rem 0; }
+}
