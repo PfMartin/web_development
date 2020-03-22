@@ -1,0 +1,134 @@
+// Tablets & Smaller
+@media(max-width: 800px) {
+  #header_home {
+    height: 30rem;
+    .header_content {
+      padding-top: 5rem;
+    }
+  }
+}
+
+// Smartphones
+@media(max-width: 500px) {
+  #main_nav {
+    flex-direction: column;
+    align-items: center;
+    li {
+      padding: 1rem;
+    }
+  }
+
+
+  #header {
+    &_home {
+      height: 10rem;
+      border-bottom: 3px solid $main-color;
+      background-position: 20% 30%;
+      .header_content {
+        display: none;
+      }
+    }
+    &_inner {
+      height: 10rem;
+
+    }
+  }
+  // Stack Grid Columns
+  #home_a .specials,
+  #home_b .stats,
+  #home_c .process,
+  #about_d .testimonials,
+  #contact_b .contact_info,
+  .items {
+    grid-template-columns: 1fr;
+  }
+  #home {
+    &_a {
+      .specials div {
+        border-bottom: 1px $light_color solid;
+        padding-bottom: 1rem;
+        &:last-child {
+          border: none;
+          padding: 0;
+        }
+      }
+    }
+    &_b {
+      .stats div {
+        padding: 2rem 0rem 1rem 0rem;
+      }
+    }
+  }
+
+  // About
+  #about {
+    &_a {
+      .about_info {
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'aw1'
+        'aw2'
+        'aw3';
+      }
+    }
+
+    &_c {
+      display: none;
+    }
+  }
+
+  // Contact
+  #contact {
+    &_a {
+      .text_fields {
+        grid-template-areas: 
+        'name'
+        'subject'
+        'email'
+        'phone'
+        'message';
+      }
+    }
+    &_b {
+      div {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px $medium_color solid;
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+    &_c {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+
+  // Footer
+  #main_footer {
+    height: 7rem;
+    .footer_content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+    }
+  }
+}
+
+// Landscape
+@media(max-height: 580px) {
+  #header_home {
+    .header_content {
+      padding: 2rem;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
